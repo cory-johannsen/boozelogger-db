@@ -7,4 +7,5 @@ DB_PASSWORD=$4
 
 cp $1 ./schema.sql
 
-docker 
+docker build --rm -t quay.io/cory_johannsen/boozelogger-db .
+docker tag -f quay.io/cory_johannsen/boozelogger-db:latest quay.io/cory_johannsen/boozelogger-db
